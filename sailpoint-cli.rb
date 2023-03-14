@@ -5,20 +5,20 @@
 class SailpointCli < Formula
   desc ""
   homepage "https://github.com/sailpoint-oss/sailpoint-cli"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.0/sail_0.5.0_darwin_arm64.tar.gz"
-      sha256 "eb8034586db48f61f2a65ac3bd35e768f4a41443647027c2133baf8125d42259"
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.1/sail_0.5.1_darwin_arm64.tar.gz"
+      sha256 "3c189093864db527935f323870a57707771b0dbe2a54e860e1e3d6e621d4bafb"
 
       def install
         bin.install "sail"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.0/sail_0.5.0_darwin_amd64.tar.gz"
-      sha256 "5254482a7dccb736a4ad5cdd078288937718544a764aea92ea600eb8412c309d"
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.1/sail_0.5.1_darwin_amd64.tar.gz"
+      sha256 "cf54d29dbda983d9aff3fa78c13bc8bf44b605f50587c5b8b477b50ad0a9d12d"
 
       def install
         bin.install "sail"
@@ -28,16 +28,16 @@ class SailpointCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.0/sail_0.5.0_linux_arm64.tar.gz"
-      sha256 "516bebf64b5d48391ef0fbe3c5357f6ef1d3dc7698d33010484fc045e10157e7"
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.1/sail_0.5.1_linux_arm64.tar.gz"
+      sha256 "f6fd82e2f4d54b346571b49284ec211c79a9c3987f9a732e961642b9885a7f0d"
 
       def install
         bin.install "sail"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.0/sail_0.5.0_linux_amd64.tar.gz"
-      sha256 "13d7c151186b3c84c63af18f09af52121b717597a27e6360a2d406e1f109841e"
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/0.5.1/sail_0.5.1_linux_amd64.tar.gz"
+      sha256 "6f4510c0f15e01bf869bb784ea4a26cdb7e337eb37343ed4dbf3fb453a07237e"
 
       def install
         bin.install "sail"
