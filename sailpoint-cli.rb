@@ -5,20 +5,20 @@
 class SailpointCli < Formula
   desc ""
   homepage "https://github.com/sailpoint-oss/sailpoint-cli"
-  version "2.0"
+  version "2.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0/sail_2.0_macOS_amd64.tar.gz"
-      sha256 "80b557035e05567d336207bf8c8f41dea0375d8db68b0e9e7b095cee03d5797b"
+    if Hardware::CPU.arm?
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0.1/sail_2.0.1_macOS_arm64.tar.gz"
+      sha256 "229e89441c981afd7b2d60d6ef15bb801b84363acf3083c021cf4aeee706079e"
 
       def install
         bin.install "bin/sail"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0/sail_2.0_macOS_arm64.tar.gz"
-      sha256 "eb5888109f5a9d4088f894be7f45e2f4084e29a5216f1637b75ea39f035994f3"
+    if Hardware::CPU.intel?
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0.1/sail_2.0.1_macOS_amd64.tar.gz"
+      sha256 "b649a68f7b0100edf720ba5930a162ad07bd87872f7fb3362321991ad929f958"
 
       def install
         bin.install "bin/sail"
@@ -27,25 +27,25 @@ class SailpointCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0/sail_2.0_linux_arm64.tar.gz"
-      sha256 "d70bfd3f55478550019b67eca7e94c393cff1e506630cd02a22414040e37f0be"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0.1/sail_2.0.1_linux_armv6.tar.gz"
+      sha256 "c4907531a2abe765c495f24d656f8a31ac5eae392f4756a3d5cb76f282799364"
 
       def install
         bin.install "bin/sail"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0/sail_2.0_linux_armv6.tar.gz"
-      sha256 "eada082d18b379210dbdffe7768c5ac035e12da935b3ffbfcdfe7bbe4c1d4d7b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0.1/sail_2.0.1_linux_arm64.tar.gz"
+      sha256 "394f8c71028587492ca64f5f43d9b127137547e841229bc2e11279b3a6f255f6"
 
       def install
         bin.install "bin/sail"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0/sail_2.0_linux_amd64.tar.gz"
-      sha256 "fde3a8fcd387f6bf53d8a0a0c9de58f2a2fab57a10a5b029f7b7d73aabba7b2a"
+      url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.0.1/sail_2.0.1_linux_amd64.tar.gz"
+      sha256 "422d44de40f0e7f31986d268a96aecbb9b214d723451d4023bb11b5892fb49a5"
 
       def install
         bin.install "bin/sail"
