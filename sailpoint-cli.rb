@@ -10,7 +10,7 @@ class SailpointCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.1.6/sail_2.1.6_macOS_arm64.tar.gz"
-      sha256 "935d364f907f1225a5218adbeea5728400eb26a4130317366ffbcfb4114b6397"
+      sha256 "63649e3600e0a508ba9e9cab1b05eb1f682f3f44a678e35a2ea89a7a0b22412b"
 
       def install
         bin.install "bin/sail"
@@ -18,7 +18,7 @@ class SailpointCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.1.6/sail_2.1.6_macOS_amd64.tar.gz"
-      sha256 "92a43ef5937b45e63a94f6f1baa364ab4e4910fcad71295fe78ce63b5a06d6d8"
+      sha256 "fccd1cdcd629e83da74d9c44029ec34adf9c60b339ffe9e9378ec770a689120d"
 
       def install
         bin.install "bin/sail"
@@ -29,7 +29,7 @@ class SailpointCli < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.1.6/sail_2.1.6_linux_armv6.tar.gz"
-      sha256 "ba6e95c596a262c1b3275d648c4b61b1efcf158c1699a61aca14bd67371c9e08"
+      sha256 "ccbc4ad038a4aaa9a2218dab9de24c6d1cb05c747338d18375891ddb052ad6fd"
 
       def install
         bin.install "bin/sail"
@@ -37,7 +37,7 @@ class SailpointCli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.1.6/sail_2.1.6_linux_arm64.tar.gz"
-      sha256 "28fece11d60b8b8f1eb72e6a16ab6d5787c686a9bc08566af40878dc3eee7105"
+      sha256 "3ea3c16af329d36ef56e5d455f2e3a417d15f89f5f96f76b97a8362f587dd990"
 
       def install
         bin.install "bin/sail"
@@ -45,7 +45,7 @@ class SailpointCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sailpoint-oss/sailpoint-cli/releases/download/2.1.6/sail_2.1.6_linux_amd64.tar.gz"
-      sha256 "6e6ba7237316b2b15ec0b56e375e6709da923a47dc4ca972eeab4ec09287926c"
+      sha256 "5940f1393fd813b05815ff096ba32cee21a7e3b48cf66313eae391bdb9f67341"
 
       def install
         bin.install "bin/sail"
